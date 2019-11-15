@@ -47,8 +47,8 @@
 
 
 ### <a id="integration"> Integration:
- - [Android integration Documents](docs/Android_README.md)
- - [iOS integration Documents](docs/iOS_README.md)
+ - [Android 集成文档](docs/Android_README.md)
+ - [iOS 集成文档](docs/iOS_README.md)
 
 
 
