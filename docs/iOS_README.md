@@ -1,18 +1,18 @@
 <img src="https://www.appsflyer.com/wp-content/uploads/2016/11/logo-1.svg"  width="200">
 
-# Cocos2dX iOS Integration Guide
+# Cocos2dX iOS集成指南
 
 ## Sample Project
 
-There's a sample project in the `proj.ios_mac` directory.
+在proj.ios_mac目录中有一个示例项目。
 
 
 
 ## Installation
 
-How to integrate the AppsFlyer SDK into your Cocos2dx Apple project.
+如何将AppsFlyer SDK集成到您的Cocos2dx Apple项目中。
 
-1\. Download the [source files](https://github.com/AppsFlyerSDK/AppsFlyerCocos2dX/tree/master/Classes/AppsFlyer) and copy them to your project. 
+1\. 下载[源文件]（https://github.com/AppsFlyerSDK/AppsFlyerCocos2dX/tree/master/Classes/AppsFlyer）并将其复制到您的项目中。
 
  - `AppsFlyerX.cpp`
  - `AppsFlyerX.h`
@@ -34,6 +34,6 @@ How to integrate the AppsFlyer SDK into your Cocos2dx Apple project.
 
 to `Classes/AppsFlyer`
 
-2\. It looks like in the image below.
+2\. 如下图所示。
 
 ![add-iOS-files](https://github.com/AppsFlyerSDK/AppsFlyerCocos2dX/blob/development/Resources/add-to-iOS-mk.png?raw=true)
