@@ -52,6 +52,7 @@
 
 
 
+
 ## <a id="usage"> Usage:
 
 #### 1\. 设置您的Dev_Key并启用AppsFlyer来检测安装，会话（应用程序打开）和更新.
@@ -96,8 +97,10 @@ void AppDelegate::applicationDidEnterBackground() {
 
 ```
 
+---
 
-##<a id="api-methods"> API Methods
+
+## <a id="api-methods"> API Methods
 
 
 ---
@@ -137,7 +140,7 @@ to track ROI (Return on Investment) and LTV (Lifetime Value).
 - The `trackEvent` method allows you to send in-app events to AppsFlyer analytics. This method allows you to add events dynamically by adding them directly to the application code.
 
 
-| parameter   | type                        | description |
+| 参数   | 类型                        | 描述 |
 | ----------- |-----------------------------|--------------|
 | `eventName` | `string`                    | custom event name, is presented in your dashboard.  See the Event list [HERE](https://github.com/AppsFlyerSDK/AppsFlyerCocos2dX/blob/dev/RD-8680/Android-docs/Classes/AppsFlyer/AppsFlyerXMacro.h)  |
 | `eventValues` | `cocos2d::ValueMap`                    | event details |
@@ -167,7 +170,12 @@ AppsFlyerX::trackEvent(AFEventPurchase, {
 
 AppsFlyer allows you to access the user attribution data in real-time directly at SDK level. It enables you to customize the landing page a user sees on the very first app open after a fresh app install.
 
+AppsFlyer允许您直接在SDK级别实时访问用户归因数据。
+它使您可以自定义用户在全新安装应用程序后打开的第一个应用程序上看到的登录页面。
+
 To access AppsFlyer's conversion data from the Android SDK implement the ConversionDataListener callback:
+
+要从Android SDK访问AppsFlyer的转换数据，请实现ConversionDataListener回调：
 
 *Examples:*
 
@@ -201,7 +209,14 @@ AppsFlyerX::setOnAppOpenAttributionFailure(onAppOpenAttributionFailure);
 ##### <a id="setUserEmails"> **`setUserEmails(userEmails, type): void`** (optional)
 
 AppsFlyer enables you to report one or more of the device’s associated email addresses. You must collect the email addresses and report it to AppsFlyer according to your required encryption method.
+
+通过AppsFlyer，您可以报告一个或多个设备的关联电子邮件地址。
+您必须收集电子邮件地址，并根据所需的加密方法将其报告给
+
+
 The following encryption methods are available: SHA1, MD5, SHA256 and plain.
+
+可以使用以下加密方法：SHA1，MD5，SHA256和Plain。
 
 
 | parameter   | type                  | Default     | description |
@@ -222,7 +237,13 @@ AppsFlyerX::setUserEmails({"kinzer.appsf@gmail.com"}, XEmailCryptTypeSHA256);
 
 Setting your own Custom ID enables you to cross-reference your own unique ID with AppsFlyer’s user ID and the other devices’ IDs. This ID is available in AppsFlyer CSV reports along with postbacks APIs for cross-referencing with you internal IDs.
 
+通过设置自己的自定义ID，您可以将自己的唯一ID与AppsFlyer的用户ID和其他设备的ID进行交叉引用。
+AppsFlyer CSV报表中可以使用此ID以及回发API，以便与您的内部ID进行交叉引用。
+
 **Note:** The ID must be set during the first launch of the app at the SDK initialization. The best practice is to call this API during the `deviceready` event, where possible.
+
+**注意：**必须在SDK初始化时首次启动应用程序时设置ID。
+最佳做法是在“ deviceready”事件期间尽可能调用此API。
 
 
 | parameter   | type                        | description |
@@ -455,7 +476,7 @@ TBD
 AppsFlyerX::registerUninstall("<TOKEN>");
 ```
 
-For more Info see the [DOCs](https://support.appsflyer.com/hc/en-us/articles/208004986-Android-Uninstall-Tracking)
+有关更多信息，请参见[DOCs]（https://support.appsflyer.com/hc/en-us/articles/208004986-Android-Uninstall-Tracking）
 
 
 
@@ -463,12 +484,16 @@ For more Info see the [DOCs](https://support.appsflyer.com/hc/en-us/articles/208
 
 ##### <a id="registerUninstallIOS"> **`registerUninstall(void* deviceToken, unsigned long length): void`** *(ios only)*
 
-You can use the `registerUninstall(void* deviceToken, unsigned long length)` API.
+您可以使用`registerUninstall（void * deviceToken，unsigned long length）`API。
 
  *or*
  
  As alternative way use directly native API:
 Open your Xcode project and locate the file `AppController.mm` under the iOS folder inside your project. Add the following code snippet under `didFinishLaunchingWithOptions` :
+
+ 作为替代方法，直接使用本机API：
+打开您的Xcode项目，然后在项目内的iOS文件夹下找到“ AppController.mm”文件。
+在`didFinishLaunchingWithOptions`下添加以下代码段：
 
 ```cpp 
 #import "AppsFlyerTracker.h"
@@ -490,6 +515,8 @@ UIUserNotificationType userNotificationTypes = (UIUserNotificationTypeAlert |
 }
 ```
 and method implementation:
+
+方法实现：
 
 ```cpp 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {    
@@ -536,6 +563,9 @@ AppsFlyerX::setMinTimeBetweenSessions(9);
 Enables app uninstall tracking.
 <a href="https://support.appsflyer.com/hc/en-us/articles/211211963-iOS-Uninstall-Tracking">More Information</a>
 
+启用应用卸载跟踪。
+<a href="https://support.appsflyer.com/hc/en-us/articles/211211963-iOS-Uninstall-Tracking">More Information</a>
+
 | parameter   | type                        | description |
 | ----------- |-----------------------------|--------------|
 | `FCM/GCM ProjectNumber`   | `String`    | GCM/FCM ProjectNumber |
@@ -551,6 +581,9 @@ Enables app uninstall tracking.
 Allows to pass GCM/FCM Tokens that where collected by third party plugins to the AppsFlyer server.
 Can be used for Uninstall Tracking.
 
+允许将第三方插件收集的GCM / FCM令牌传递到AppsFlyer服务器。
+可用于卸载跟踪。
+
 
 | parameter   | type                        | description |
 | ----------- |-----------------------------|--------------|
@@ -564,7 +597,7 @@ Can be used for Uninstall Tracking.
 
 
 
-### <a id="deep-linking-tracking"> Deep linking Tracking
+### <a id="deep-linking-tracking"> Deep linking Tracking 深层链接跟踪
 
 #### <a id="dl-android"> Android
 In ver. >4.2.5 deeplinking metadata (scheme/host) is sent automatically
