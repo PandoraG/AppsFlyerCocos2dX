@@ -4,9 +4,9 @@
 
 
 ----------
-In order for us to provide optimal support, we would kindly ask you to submit any issues to support@appsflyer.com
+为了向我们提供最佳支持，请您将任何问题提交至support@appsflyer.com
 
-*When submitting an issue please specify your AppsFlyer sign-up (account) email , your app ID , production steps, logs, code snippets and any additional relevant information.*
+*提交问题时，请指定您的AppsFlyer注册（帐户）电子邮件，您的应用ID，生产步骤，日志，代码段以及任何其他相关信息。*
 
 ----------
 
@@ -54,8 +54,8 @@ In order for us to provide optimal support, we would kindly ask you to submit an
 
 ## <a id="usage"> Usage:
 
-#### 1\. Set your  Dev_Key and enable AppsFlyer to detect installations, sessions (app opens) and updates.
-> This is the minimum requirement to start tracking your app installs and is already implemented in this plugin. You **MUST** modify this call and provide:
+#### 1\. 设置您的Dev_Key并启用AppsFlyer来检测安装，会话（应用程序打开）和更新.
+> 这是开始跟踪您的应用安装的最低要求，并且已在此插件中实现。您**必须**修改此通话并提供：
 **-devKey** - Your application devKey provided by AppsFlyer.
 **-appId**  - (*For iOS only*) Your iTunes Application ID.
 
