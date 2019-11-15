@@ -56,13 +56,11 @@
 
 #### 1\. 设置您的Dev_Key并启用AppsFlyer来检测安装，会话（应用程序打开）和更新.
 > 这是开始跟踪您的应用安装的最低要求，并且已在此插件中实现。您**必须**修改此通话并提供：
-**-devKey** - Your application devKey provided by AppsFlyer.
-**-appId**  - (*For iOS only*) Your iTunes Application ID.
 
+**-devKey** - 您的应用程序devKey由AppsFlyer提供。
+**-appId**  - (*For iOS only*) 您的iTunes应用程序ID
 
-
-Add the following lines into `applicationDidFinishLaunching` and to `applicationWillEnterForeground` method to be able to initialize tracking with your own AppsFlyer dev key:
-
+将以下各行添加到applicationDidFinishLaunching和applicationWillEnterForeground方法中，以便能够使用自己的AppsFlyer开发键来初始化跟踪：
 
 ```cpp
 #include "AppsFlyer/AppsFlyerX.h"
@@ -87,7 +85,7 @@ void AppDelegate::applicationWillEnterForeground() {
 }
 ```
 
-Also notify AppsFlyer SDK about background event:
+还将后台事件通知给AppsFlyer SDK：
 
 ```cpp
 void AppDelegate::applicationDidEnterBackground() {
@@ -106,7 +104,7 @@ void AppDelegate::applicationDidEnterBackground() {
 
 ##### <a id="setIsDebug"> **`setIsDebug(boolean);`**
 
- if `true` AppsFlyer SDK will run in debug mode
+ 如果`true` AppsFlyer SDK将在调试模式下运行
 
 
 *Example:*
@@ -119,8 +117,7 @@ AppsFlyerX::setIsDebug(true);
 
 ##### <a id="stopTracking"> **`stopTracking(boolean);`**
 
- if `true` AppsFlyer SDK will enter to pending mode, no activity
-Be sure to set `stopTracking(false)` to release the SDK from stop tracking
+ 如果`true` AppsFlyer SDK将进入待处理模式, 无活动确保设置`stopTracking（false）`以从停止跟踪中释放SDK。
 
 *Example:*
 
